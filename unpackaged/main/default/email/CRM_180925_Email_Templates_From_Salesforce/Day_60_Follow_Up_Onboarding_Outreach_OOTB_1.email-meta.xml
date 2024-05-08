@@ -4,8 +4,8 @@
     <description>Checking in with customer implementation</description>
     <encodingKey>UTF-8</encodingKey>
     <name>Day 60 Follow Up: Onboarding Outreach</name>
-    <style>none</style>
-    <subject>Welcome!</subject>
+    <style>one</style>
+    <subject>Welcom!</subject>
     <type>custom</type>
     <uiType>SFX</uiType>
 </EmailTemplate>
