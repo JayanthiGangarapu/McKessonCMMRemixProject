@@ -3,9 +3,9 @@
     <available>true</available>
     <description>Checking in with customer implementation</description>
     <encodingKey>UTF-8</encodingKey>
-    <name>Day 60 Follow Up: Onboarding Outreach</name>
+    <name>Day 60 Follow Up: Onboarding Outre</name>
     <style>none</style>
-    <subject>Welcome!</subject>
+    <subject>Welco</subject>
     <type>custom</type>
     <uiType>SFX</uiType>
 </EmailTemplate>
