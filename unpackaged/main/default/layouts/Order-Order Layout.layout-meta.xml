@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>CreateContractFromOrder</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -32,15 +33,15 @@
                 <field>BillingAddress</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Contracted__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>ActivatedById</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>ContractId</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>TotalAmount</field>
@@ -60,6 +61,14 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>ActivatedDate</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BillToContactId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ShipToContactId</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -101,8 +110,8 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Additional Information</label>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -110,9 +119,9 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Custom Links</label>
-        <layoutColumns/>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
+        <layoutColumns />
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
@@ -152,9 +161,22 @@
         <fields>TASK.LAST_UPDATE</fields>
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>CONTRACT.CONTRACT_NUMBER</fields>
+        <fields>CONTRACT.NAME</fields>
+        <fields>SALES.ACCOUNT.NAME</fields>
+        <fields>CONTRACT.STATUS</fields>
+        <relatedList>Contract.SBQQ__Order__c</relatedList>
+    </relatedLists>
     <relatedObjects>ContractId</relatedObjects>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
+    <summaryLayout>
+        <masterLabel>00hHs00000cABKk</masterLabel>
+        <sizeX>4</sizeX>
+        <sizeY>0</sizeY>
+        <summaryLayoutStyle>Default</summaryLayoutStyle>
+    </summaryLayout>
 </Layout>
